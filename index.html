@@ -1,180 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5961353845898808"
-    crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-5961353845898808">
-    <title>Pokedex (100 Pokémon)</title>
+    <title>Minecraft Hosting by Yair0211</title>
     <style>
-    body {
-        font-family: sans-serif;
-        margin: 20px;
-        background-color: #f4f4f4;
-    }
-    h1 {
-        text-align: center;
-        margin-bottom: 20px;
-        color: #333;
-    }
-    #pokedex-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 15px;
-    }
-    .pokedex-item {
-        background-color: #fff;
-        border: 1px solid #ddd;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
-        text-align: center;
-        cursor: pointer;
-    }
-    .pokemon-number {
-        font-size: 0.8em;
-        color: #777;
-        margin-bottom: 5px;
-    }
-    .pokemon-image {
-        width: 80px;
-        height: 80px;
-        margin-bottom: 5px;
-    }
-    .pokemon-name {
-        font-weight: bold;
-        color: #2c3e50;
-        margin-bottom: 3px;
-    }
-    .pokemon-types {
-        font-size: 0.75em;
-        color: #555;
-        font-style: italic;
-    }
-    #pokemon-info {
-        background-color: #fff;
-        border: 1px solid #ccc;
-        padding: 20px;
-        margin-top: 20px;
-        border-radius: 8px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        display: none; /* Hidden by default */
-    }
-    #pokemon-info h2 {
-        color: #007bff;
-        margin-top: 0;
-    }
-    #pokemon-info p {
-        margin-bottom: 10px;
-    }
-    .variant-image {
-        width: 60px;
-        height: 60px;
-        margin-right: 5px;
-        vertical-align: middle;
-    }
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .highlight {
+            color: #007bff;
+            font-weight: bold;
+        }
+        .features-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .features-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .features-list li:before {
+            content: "✓";
+            color: #28a745;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #218838;
+        }
+        .signature {
+            text-align: right;
+            font-style: italic;
+            color: #777;
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Welcome to Your Next Minecraft Adventure!</h1>
+        <p>Hey there, future Minecrafters! 👋</p>
+        <p>Ready to dive into limitless adventures and build worlds beyond your wildest dreams? Well, you've landed in the perfect spot!</p>
+        <p>I'm <span class="highlight">Yair0211</span>, and I'm stoked to introduce you to your next-level Minecraft hosting experience. Forget laggy gameplay and complicated setups. We're all about smooth, seamless, and seriously fun Minecraft hosting that lets you focus on what truly matters: crafting, exploring, and creating epic memories with your friends.</p>
+        <p>Whether you're a seasoned architect of blocky wonders or just starting your journey into the Overworld, we've got a hosting package that's just right for you. Expect:</p>
+        <ul class="features-list">
+            <li><span class="highlight">Blazing-fast servers:</span> Say goodbye to frustrating lag and hello to buttery-smooth gameplay.</li>
+            <li><span class="highlight">Effortless setup:</span> Get your server up and running in minutes, not hours.</li>
+            <li><span class="highlight">Reliable performance:</span> We're always on, so your adventures never have to stop.</li>
+            <li><span class="highlight">Friendly support:</span> Got a question? Need a hand? We're here to help you every step of the way.</li>
+        </ul>
+        <p>So, what are you waiting for? Let's build something amazing together! Explore our hosting plans and get ready to unleash your creativity. The only limit is your imagination!</p>
+        <a href="#pricing" class="button">Explore Hosting Plans</a>
+        <p class="signature">- Yair0211</p>
 
-<h1>Pokedex (First 100 Pokémon)</h1>
-
-<div id="pokedex-container">
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="1" data-name="Bulbasaur" data-types="Grass/Poison" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"}]'>
-        <span class="pokemon-number">#001</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Bulbasaur" class="pokemon-image">
-        <span class="pokemon-name">Bulbasaur</span>
-        <span class="pokemon-types">(Grass/Poison)</span>
+        <h2 id="pricing" style="color: #2c3e50; margin-top: 40px; text-align: center;">Our Awesome Hosting Plans</h2>
+        <p style="text-align: center;">(Replace this section with your actual pricing and plan details)</p>
+        <div style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 5px;">
+            <h3>Basic Plan</h3>
+            <p>Ideal for small groups.</p>
+            <p><span class="highlight">Slots:</span> 10</p>
+            <p><span class="highlight">RAM:</span> 2GB</p>
+            <p><span class="highlight">Price:</span> $X/month</p>
+            <a href="#" class="button small">Get Started</a>
+        </div>
+        <div style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 5px;">
+            <h3>Standard Plan</h3>
+            <p>Great for medium-sized communities.</p>
+            <p><span class="highlight">Slots:</span> 25</p>
+            <p><span class="highlight">RAM:</span> 4GB</p>
+            <p><span class="highlight">Price:</span> $Y/month</p>
+            <a href="#" class="button small">Get Started</a>
+        </div>
+        <div style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 5px;">
+            <h3>Premium Plan</h3>
+            <p>Perfect for large servers and modpacks.</p>
+            <p><span class="highlight">Slots:</span> 50+</p>
+            <p><span class="highlight">RAM:</span> 8GB+</p>
+            <p><span class="highlight">Price:</span> $Z/month</p>
+            <a href="#" class="button small">Get Started</a>
+        </div>
+        <p style="text-align: center; margin-top: 20px;"><small>© 2025 Minecraft Hosting by Yair0211</small></p>
     </div>
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="2" data-name="Ivysaur" data-types="Grass/Poison" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"}]'>
-        <span class="pokemon-number">#002</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png" alt="Ivysaur" class="pokemon-image">
-        <span class="pokemon-name">Ivysaur</span>
-        <span class="pokemon-types">(Grass/Poison)</span>
-    </div>
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="3" data-name="Venusaur" data-types="Grass/Poison" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png"}, {"name": "Mega", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/mega/3.png"}]'>
-        <span class="pokemon-number">#003</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png" alt="Venusaur" class="pokemon-image">
-        <span class="pokemon-name">Venusaur</span>
-        <span class="pokemon-types">(Grass/Poison)</span>
-    </div>
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="4" data-name="Charmander" data-types="Fire" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"}]'>
-        <span class="pokemon-number">#004</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png" alt="Charmander" class="pokemon-image">
-        <span class="pokemon-name">Charmander</span>
-        <span class="pokemon-types">(Fire)</span>
-    </div>
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="5" data-name="Charmeleon" data-types="Fire" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png"}]'>
-        <span class="pokemon-number">#005</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png" alt="Charmeleon" class="pokemon-image">
-        <span class="pokemon-name">Charmeleon</span>
-        <span class="pokemon-types">(Fire)</span>
-    </div>
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="6" data-name="Charizard" data-types="Fire/Flying" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"}, {"name": "Mega X", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/mega/6-x.png"}, {"name": "Mega Y", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/mega/6-y.png"}]'>
-        <span class="pokemon-number">#006</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png" alt="Charizard" class="pokemon-image">
-        <span class="pokemon-name">Charizard</span>
-        <span class="pokemon-types">(Fire/Flying)</span>
-    </div>
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="7" data-name="Squirtle" data-types="Water" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png"}]'>
-        <span class="pokemon-number">#007</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png" alt="Squirtle" class="pokemon-image">
-        <span class="pokemon-name">Squirtle</span>
-        <span class="pokemon-types">(Water)</span>
-    </div>
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="8" data-name="Wartortle" data-types="Water" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png"}]'>
-        <span class="pokemon-number">#008</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png" alt="Wartortle" class="pokemon-image">
-        <span class="pokemon-name">Wartortle</span>
-        <span class="pokemon-types">(Water)</span>
-    </div>
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="9" data-name="Blastoise" data-types="Water" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"}, {"name": "Mega", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/mega/9.png"}]'>
-        <span class="pokemon-number">#009</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png" alt="Blastoise" class="pokemon-image">
-        <span class="pokemon-name">Blastoise</span>
-        <span class="pokemon-types">(Water)</span>
-    </div>
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="10" data-name="Caterpie" data-types="Bug" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png"}]'>
-        <span class="pokemon-number">#010</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png" alt="Caterpie" class="pokemon-image">
-        <span class="pokemon-name">Caterpie</span>
-        <span class="pokemon-types">(Bug)</span>
-    </div>
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="11" data-name="Metapod" data-types="Bug" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/11.png"}]'>
-        <span class="pokemon-number">#011</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/11.png" alt="Metapod" class="pokemon-image">
-        <span class="pokemon-name">Metapod</span>
-        <span class="pokemon-types">(Bug)</span>
-    </div>
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="12" data-name="Butterfree" data-types="Bug/Flying" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/12.png"}]'>
-        <span class="pokemon-number">#012</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/12.png" alt="Butterfree" class="pokemon-image">
-        <span class="pokemon-name">Butterfree</span>
-        <span class="pokemon-types">(Bug/Flying)</span>
-    </div>
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="13" data-name="Weedle" data-types="Bug/Poison" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/13.png"}]'>
-        <span class="pokemon-number">#013</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/13.png" alt="Weedle" class="pokemon-image">
-        <span class="pokemon-name">Weedle</span>
-        <span class="pokemon-types">(Bug/Poison)</span>
-    </div>
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="14" data-name="Kakuna" data-types="Bug/Poison" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/14.png"}]'>
-        <span class="pokemon-number">#014</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/14.png" alt="Kakuna" class="pokemon-image">
-        <span class="pokemon-name">Kakuna</span>
-        <span class="pokemon-types">(Bug/Poison)</span>
-    </div>
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="15" data-name="Beedrill" data-types="Bug/Poison" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/15.png"}, {"name": "Mega", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/mega/15.png"}]'>
-        <span class="pokemon-number">#015</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/15.png" alt="Beedrill" class="pokemon-image">
-        <span class="pokemon-name">Beedrill</span>
-        <span class="pokemon-types">(Bug/Poison)</span>
-    </div>
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="16" data-name="Pidgey" data-types="Normal/Flying" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/16.png"}]'>
-        <span class="pokemon-number">#016</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/16.png" alt="Pidgey" class="pokemon-image">
-        <span class="pokemon-name">Pidgey</span>
-        <span class="pokemon-types">(Normal/Flying)</span>
-    </div>
-    <div class="pokedex-item" onclick="showPokemonInfo(this)" data-number="17" data-name="Pidgeotto" data-types="Normal/Flying" data-variants='[{"name": "Normal", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"}]'>
-        <span class="pokemon-number">#017</span>
-        <img src="https://raw.githubusercontent.com
+</body>
+</html>
