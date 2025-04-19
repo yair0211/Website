@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Minecraft Hosting by Yair0211</title>
+    <title>Free 6GB Minecraft Hosting by Yair0211</title>
     <style>
         /* General Styles */
         body {
@@ -27,6 +27,7 @@
             border-radius: 15px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
             border: 2px solid #555;
+            text-align: center; /* Center the remaining content */
         }
         h1, h2, h3 {
             color: #ffaa00;
@@ -46,7 +47,7 @@
         p {
             margin-bottom: 25px;
             color: #ddd;
-            text-align: left;
+            text-align: center; /* Center the intro text now */
             font-size: 1.1em;
         }
         .highlight {
@@ -131,21 +132,21 @@
             transform: translateY(-5px) rotateX(5deg);
             box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7);
         }
-        /* Plan Grid */
+        /* Plan Grid (Now Single Plan) */
         .plan-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            display: flex; /* Use flexbox for centering a single item */
+            justify-content: center;
             margin-top: 50px;
             text-align: center;
         }
         .plan-card {
-            border: 2px solid #666;
+            border: 3px solid #00cc66; /* Highlight the free plan */
             padding: 40px;
             border-radius: 12px;
-            background-color: rgba(40, 40, 40, 0.8);
-            box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 100, 0, 0.5); /* Green tint */
+            box-shadow: 8px 8px 20px rgba(0, 150, 0, 0.7);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            max-width: 400px; /* Limit width of the single plan card */
         }
         .plan-card:hover {
             transform: translateY(-8px);
@@ -164,34 +165,25 @@
             font-size: 1.1em;
         }
         .plan-card .price {
-            font-size: 2.8em;
+            font-size: 3em; /* Larger "FREE" text */
             font-weight: bold;
+            color: #ccff33;
             margin-bottom: 30px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-        }
-        .plan-card.free-plan {
-            border: 3px solid #00cc66; /* Highlight the free plan with a bright border */
-            background-color: rgba(0, 100, 0, 0.5); /* A slightly green-tinted background */
-            box-shadow: 8px 8px 20px rgba(0, 150, 0, 0.7); /* More prominent shadow */
-        }
-        .plan-card.free-plan .price {
-            color: #ccff33; /* Bright green price for free */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-            font-size: 3em; /* Make the "FREE" stand out */
         }
         .button.small {
             padding: 15px 30px;
             font-size: 1.2em;
             margin-top: 30px;
-            background-color: #555;
-            color: #eee;
+            background-color: #00cc66; /* Green button for free plan */
+            color: #222;
             border-radius: 8px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
             box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
             transition: background-color 0.3s ease, transform 0.2s ease-in-out;
         }
         .button.small:hover {
-            background-color: #777;
+            background-color: #00ff80;
             transform: translateY(-3px);
         }
         /* Footer */
@@ -204,63 +196,47 @@
             border-top: 1px solid #777;
             padding-top: 20px;
         }
+        /* Hide the "Unearth Our Powerful Hosting Plans" heading */
+        #pricing {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="main-title">Minecrafted Hosting by Yair0211</h1>
+        <h1 class="main-title">Free 6GB Minecraft Hosting by Yair0211</h1>
         <div class="intro-section">
-            <p>Greetings, fellow adventurers! Prepare to delve into the blocky realms with premium Minecraft hosting, meticulously crafted for you by <span class="highlight">Yair0211</span>.</p>
-            <p>Bid farewell to lag and convoluted setups! We deliver a <span class="highlight">seamless</span>, <span class="highlight">reliable</span>, and utterly <span class="highlight">immersive</span> Minecraft experience, empowering you to focus on building, exploring, and forging legendary tales with your comrades.</p>
+            <p>Greetings, fellow adventurers! Experience the blocky realms with absolutely free Minecraft hosting, courtesy of <span class="highlight">Yair0211</span>!</p>
+            <p>Say goodbye to costs and hello to endless creativity! Claim your free, <span class="highlight">reliable</span>, and <span class="highlight">immersive</span> 6GB Minecraft server and start building your legendary world today!</p>
         </div>
 
         <div class="features-section">
             <h2>Our Block-Solid Features</h2>
             <ul class="features-list">
-                <li><span class="highlight">Lightning-Fast Performance</span>: Experience the Overworld and beyond with unparalleled speed.</li>
-                <li><span class="highlight">Effortless World Deployment</span>: Launch your server in mere moments with our intuitive interface.</li>
-                <li><span class="highlight">Unbreakable Stability</span>: Rely on our fortress of servers for 24/7 uptime.</li>
-                <li><span class="highlight">Dedicated Support Crew</span>: Our expert team is your steadfast ally, ready to assist.</li>
-                <li><span class="highlight">Automated World Preservation</span>: Your masterpieces are safeguarded with automatic backups.</li>
-                <li><span class="highlight">Always Cutting-Edge</span>: Enjoy the latest Minecraft updates and features from the forge.</li>
+                <li><span class="highlight">Blazing-Fast Performance</span>: Enjoy smooth gameplay on our high-performance infrastructure.</li>
+                <li><span class="highlight">Effortless Setup</span>: Get your free server running quickly and easily.</li>
+                <li><span class="highlight">Dependable Stability</span>: Count on us for consistent uptime.</li>
+                <li><span class="highlight">Community Support</span>: Access our helpful community for assistance.</li>
+                <li><span class="highlight">Automatic Backups</span>: Your creations are safe.</li>
+                <li><span class="highlight">Latest Minecraft Versions</span>: Play on the newest updates.</li>
             </ul>
         </div>
 
         <div class="get-started-area">
-            <h2>Embark on Your Epic Saga!</h2>
-            <p style="color: #ddd; font-size: 1.2em;">The adventure awaits! Claim your block of the digital world today.</p>
-            <a href="#pricing" class="get-started-button">Forge Your Server Now!</a>
+            <h2>Claim Your Free 6GB Server Now!</h2>
+            <p style="color: #ddd; font-size: 1.2em;">Your free Minecraft adventure is just a click away!</p>
+            <a href="#" class="get-started-button">Get Your Free Server!</a>
         </div>
 
-        <h2 id="pricing">Unearth Our Powerful Hosting Plans</h2>
-        <p style="text-align: center; color: #ccc; font-size: 1.1em;">Discover the perfect power source for your Minecraft universe.</p>
-        <div class="plan-grid">
-            <div class="plan-card">
-                <h3>The Novice Node</h3>
-                <p>For fledgling builders and intimate gatherings.</p>
-                <p class="price">$14.99/month</p>
-                <p>Up to 15 Adventurers</p>
-                <p>3 GB RAM</p>
-                <p>Apprentice Support</p>
-                <a href="#" class="button small">Select Node</a>
-            </div>
+        <h2 id="pricing">Our Powerful Hosting Plans</h2> <div class="plan-grid">
             <div class="plan-card free-plan">
                 <h3>The Artisan Engine</h3>
-                <p>Perfect for growing communities and ambitious creations.</p>
+                <p>Your free starting point for epic creations!</p>
                 <p class="price">FREE</p>
                 <p>Up to 20 Crafters</p>
                 <p>6 GB RAM</p>
                 <p>Community Support</p>
-                <a href="#" class="button small" style="background-color: #00cc66; color: #222;">Get Free Server</a>
-            </div>
-            <div class="plan-card">
-                <h3>The Legend Core</h3>
-                <p>For sprawling realms, modded sagas, and ultimate performance.</p>
-                <p class="price">$49.99/month</p>
-                <p>50+ Legends</p>
-                <p>10 GB+ RAM</p>
-                <p>Legendary Support</p>
-                <a href="#" class="button small">Ignite Core</a>
+                <a href="#" class="button small">Get Free Server</a>
             </div>
         </div>
         <p class="signature">- Yair0211</p>
