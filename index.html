@@ -9,39 +9,45 @@
     body {
         font-family: sans-serif;
         margin: 20px;
-        background-color: #f0f0f0;
+        background-color: #f4f4f4;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    #pokedex-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
     }
     .pokedex-entry {
         background-color: #fff;
-        border: 1px solid #ccc;
-        padding: 15px;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        display: flex;
-        align-items: center;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+        text-align: center;
     }
     .pokemon-number {
-        font-weight: bold;
-        color: #333;
-        margin-right: 10px;
-        width: 30px;
-        text-align: right;
+        font-size: 0.8em;
+        color: #777;
+        margin-bottom: 5px;
     }
     .pokemon-image {
-        width: 50px;
-        height: 50px;
-        margin-right: 10px;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 5px;
     }
     .pokemon-name {
-        font-size: 1.2em;
-        color: #007bff;
-        margin-right: 10px;
-        flex-grow: 1;
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 3px;
     }
     .pokemon-types {
+        font-size: 0.75em;
+        color: #555;
         font-style: italic;
-        color: #6c757d;
     }
     </style>
 </head>
@@ -249,10 +255,4 @@
         <span class="pokemon-types">(Poison)</span>
     </div>
     <div class="pokedex-entry">
-        <span class="pokemon-number">#034</span>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/34.png" alt="Nidoking" class="pokemon-image">
-        <span class="pokemon-name">Nidoking</span>
-        <span class="pokemon-types">(Poison/Ground)</span>
-    </div>
-    <div class="pokedex-entry">
-        <span class="pokemon
+        <span
