@@ -5,12 +5,12 @@
     <style>
         /* General Styles */
         body {
-            font-family: 'Minecraft', monospace; /* A true Minecraft-style font! */
+            font-family: 'Minecraft', monospace;
             margin: 0;
-            background-color: #333; /* Dark, immersive background */
-            color: #f0f0f0; /* Light text for contrast */
+            background-color: #333;
+            color: #f0f0f0;
             line-height: 1.7;
-            background-image: url('https://i.imgur.com/c4kx693.png'); /* A more reliable tiling Minecraft texture */
+            background-image: url('https://i.imgur.com/c4kx693.png'); /* A reliable tiling Minecraft texture */
             background-size: cover;
             background-repeat: repeat;
             background-attachment: fixed;
@@ -20,23 +20,23 @@
             src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Using Press Start 2P as a close alternative */
         }
         .container {
-            max-width: 1200px; /* Wider for a more expansive feel */
+            max-width: 1200px;
             margin: 50px auto;
-            background-color: rgba(0, 0, 0, 0.8); /* Darker, slightly transparent container */
-            padding: 60px; /* More padding */
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 60px;
             border-radius: 15px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Deeper shadow */
-            border: 2px solid #555; /* Subtle border */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            border: 2px solid #555;
         }
         h1, h2, h3 {
-            color: #ffaa00; /* Gold/Yellow for a thematic highlight */
+            color: #ffaa00;
             text-align: center;
             margin-bottom: 35px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for depth */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
         h1 {
             font-size: 3.5em;
-            font-weight: normal; /* Minecraft font is usually not bold */
+            font-weight: normal;
             letter-spacing: 2px;
         }
         h2 {
@@ -50,17 +50,17 @@
             font-size: 1.1em;
         }
         .highlight {
-            color: #ccff33; /* A brighter green for emphasis */
-            font-weight: bold; /* Or just rely on color */
+            color: #ccff33;
+            font-weight: bold;
         }
         /* Intro Section */
         .intro-section {
             margin-bottom: 60px;
             text-align: center;
             padding: 30px;
-            background-color: rgba(50, 50, 50, 0.7); /* Slightly lighter background */
+            background-color: rgba(50, 50, 50, 0.7);
             border-radius: 10px;
-            border: 1px solid #777; /* Added a subtle border */
+            border: 1px solid #777;
         }
         .intro-section p {
             font-size: 1.2em;
@@ -71,11 +71,11 @@
             padding: 40px;
             border-radius: 12px;
             margin-bottom: 60px;
-            border: 2px dashed #777; /* Dashed border for a different feel */
+            border: 2px dashed #777;
         }
         .features-section h2 {
-            text-align: left; /* Align features heading to the left */
-            border-bottom: 2px solid #777; /* Added a separator */
+            text-align: left;
+            border-bottom: 2px solid #777;
             padding-bottom: 15px;
             margin-bottom: 25px;
         }
@@ -93,7 +93,7 @@
             font-size: 1.15em;
         }
         .features-list li:before {
-            content: '>'; /* A simple arrow as a thematic bullet */
+            content: '>';
             color: #ffcc00;
             position: absolute;
             left: 10px;
@@ -106,17 +106,17 @@
             margin-top: 70px;
             margin-bottom: 70px;
             text-align: center;
-            perspective: 500px; /* For a subtle 3D effect */
-            background-color: rgba(60, 60, 60, 0.7); /* Slightly darker background */
+            perspective: 500px;
+            background-color: rgba(60, 60, 60, 0.7);
             padding: 40px;
             border-radius: 10px;
-            border: 1px solid #888; /* Added a subtle border */
+            border: 1px solid #888;
         }
         .get-started-button {
             display: inline-block;
             padding: 20px 40px;
-            background-color: #00cc66; /* Bright, inviting green */
-            color: #222; /* Dark text on bright button */
+            background-color: #00cc66;
+            color: #222;
             text-decoration: none;
             border-radius: 10px;
             font-weight: bold;
@@ -127,14 +127,14 @@
             transform-style: preserve-3d;
         }
         .get-started-button:hover {
-            background-color: #00ff80; /* Brighter hover */
-            transform: translateY(-5px) rotateX(5deg); /* Subtle lift and tilt */
+            background-color: #00ff80;
+            transform: translateY(-5px) rotateX(5deg);
             box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7);
         }
         /* Plan Grid */
         .plan-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Wider plan cards */
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
             margin-top: 50px;
             text-align: center;
@@ -155,7 +155,7 @@
             color: #ffa000;
             margin-bottom: 30px;
             font-size: 2em;
-            border-bottom: 1px solid #777; /* Added a subtle separator */
+            border-bottom: 1px solid #777;
             padding-bottom: 10px;
         }
         .plan-card p {
@@ -166,9 +166,18 @@
         .plan-card .price {
             font-size: 2.8em;
             font-weight: bold;
-            color: #00cc66;
             margin-bottom: 30px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        .plan-card.free-plan {
+            border: 3px solid #00cc66; /* Highlight the free plan with a bright border */
+            background-color: rgba(0, 100, 0, 0.5); /* A slightly green-tinted background */
+            box-shadow: 8px 8px 20px rgba(0, 150, 0, 0.7); /* More prominent shadow */
+        }
+        .plan-card.free-plan .price {
+            color: #ccff33; /* Bright green price for free */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-size: 3em; /* Make the "FREE" stand out */
         }
         .button.small {
             padding: 15px 30px;
@@ -192,7 +201,7 @@
             color: #777;
             font-size: 1em;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-            border-top: 1px solid #777; /* Added a top border */
+            border-top: 1px solid #777;
             padding-top: 20px;
         }
     </style>
@@ -235,14 +244,14 @@
                 <p>Apprentice Support</p>
                 <a href="#" class="button small">Select Node</a>
             </div>
-            <div class="plan-card">
+            <div class="plan-card free-plan">
                 <h3>The Artisan Engine</h3>
-                <p>For growing communities and ambitious creations.</p>
-                <p class="price">$29.99/month</p>
-                <p>Up to 30 Crafters</p>
+                <p>Perfect for growing communities and ambitious creations.</p>
+                <p class="price">FREE</p>
+                <p>Up to 20 Crafters</p>
                 <p>6 GB RAM</p>
-                <p>Master Support</p>
-                <a href="#" class="button small">Harness Engine</a>
+                <p>Community Support</p>
+                <a href="#" class="button small" style="background-color: #00cc66; color: #222;">Get Free Server</a>
             </div>
             <div class="plan-card">
                 <h3>The Legend Core</h3>
