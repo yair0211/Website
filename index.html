@@ -3,58 +3,77 @@
 <head>
     <title>Minecraft Hosting by Yair0211</title>
     <style>
+        /* General Styles */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Minecraft', monospace; /* A true Minecraft-style font! */
             margin: 0;
-            background-color: #e6f7ff; /* Very light blue background */
-            color: #333;
-            line-height: 1.6;
-            background-image: url('https://via.placeholder.com/1920x400.png?text=Subtle+Minecraft+Background'); /* Replace with a real subtle Minecraft background image URL */
+            background-color: #333; /* Dark, immersive background */
+            color: #f0f0f0; /* Light text for contrast */
+            line-height: 1.7;
+            background-image: url('https://i.imgur.com/M06Xn9N.png'); /* Replace with a cool, tiling Minecraft background texture */
             background-size: cover;
-            background-repeat: no-repeat;
+            background-repeat: repeat;
             background-attachment: fixed;
         }
+        @font-face {
+            font-family: 'Minecraft';
+            src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Using Press Start 2P as a close alternative if a direct Minecraft font isn't easily available */
+        }
         .container {
-            max-width: 960px;
-            margin: 60px auto; /* Increased top margin */
-            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+            max-width: 1200px; /* Wider for a more expansive feel */
+            margin: 50px auto;
+            background-color: rgba(0, 0, 0, 0.8); /* Darker, slightly transparent container */
+            padding: 60px; /* More padding */
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Deeper shadow */
+            border: 2px solid #555; /* Subtle border */
         }
         h1, h2, h3 {
-            color: #2e8b57;
+            color: #ffaa00; /* Gold/Yellow for a thematic highlight */
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 35px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for depth */
         }
         h1 {
-            font-size: 2.8em; /* Slightly larger title */
-            font-weight: 700; /* More emphasis on the title */
-            margin-bottom: 30px;
+            font-size: 3.5em;
+            font-weight: normal; /* Minecraft font is usually not bold */
+            letter-spacing: 2px;
         }
         h2 {
-            font-size: 2em;
-            margin-top: 50px;
+            font-size: 2.5em;
+            margin-top: 60px;
         }
         p {
-            margin-bottom: 20px;
-            color: #555;
+            margin-bottom: 25px;
+            color: #ddd;
             text-align: left;
+            font-size: 1.1em;
         }
         .highlight {
-            color: #2e8b57;
-            font-weight: bold;
+            color: #ccff33; /* A brighter green for emphasis */
+            font-weight: bold; /* Or just rely on color */
         }
+        /* Intro Section */
         .intro-section {
-            margin-bottom: 40px;
-            text-align: center; /* Center the initial paragraph */
-        }
-        .features-section {
-            background-color: #f9f9f9;
+            margin-bottom: 60px;
+            text-align: center;
             padding: 30px;
-            border-radius: 8px;
-            margin-bottom: 40px;
-            border: 1px solid #eee;
+            background-color: rgba(50, 50, 50, 0.7); /* Slightly lighter background */
+            border-radius: 10px;
+        }
+        .intro-section p {
+            font-size: 1.2em;
+        }
+        /* Features Section */
+        .features-section {
+            background-color: rgba(30, 30, 30, 0.7);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 60px;
+            border: 2px dashed #777; /* Dashed border for a different feel */
+        }
+        .features-section h2 {
+            text-align: left; /* Align features heading to the left */
         }
         .features-list {
             list-style: none;
@@ -63,161 +82,168 @@
             text-align: left;
         }
         .features-list li {
-            margin-bottom: 18px; /* Slightly more space between features */
-            padding-left: 30px;
+            margin-bottom: 20px;
+            padding-left: 40px;
             position: relative;
-            color: #555;
-            font-size: 1.1em; /* Slightly larger feature text */
+            color: #eee;
+            font-size: 1.15em;
         }
         .features-list li:before {
-            content: "⛏"; /* Using a pickaxe icon */
-            color: #daa520; /* Golden color for the icon */
+            content: '>'; /* A simple arrow as a thematic bullet */
+            color: #ffcc00;
             position: absolute;
-            left: 0;
-            top: 2px;
-            font-weight: bold;
-            font-size: 1.2em;
+            left: 10px;
+            top: 0px;
+            font-size: 1.5em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
         }
+        /* Get Started Area */
         .get-started-area {
-            margin-top: 50px;
-            margin-bottom: 50px;
+            margin-top: 70px;
+            margin-bottom: 70px;
             text-align: center;
+            perspective: 500px; /* For a subtle 3D effect */
         }
         .get-started-button {
             display: inline-block;
-            padding: 18px 36px; /* Larger button */
-            background-color: #4CAF50; /* A more vibrant green */
-            color: #fff;
+            padding: 20px 40px;
+            background-color: #00cc66; /* Bright, inviting green */
+            color: #222; /* Dark text on bright button */
             text-decoration: none;
-            border-radius: 12px;
-            font-weight: 700; /* More emphasis */
-            font-size: 1.3em;
-            transition: background-color 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            box-shadow: 0 8px 16px rgba(76, 175, 80, 0.3); /* More prominent shadow */
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+            transition: background-color 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease-in-out;
+            transform-style: preserve-3d;
         }
         .get-started-button:hover {
-            background-color: #45a049;
-            transform: scale(1.08); /* More noticeable pop */
-            box-shadow: 0 10px 20px rgba(76, 175, 80, 0.4);
+            background-color: #00ff80; /* Brighter hover */
+            transform: translateY(-5px) rotateX(5deg); /* Subtle lift and tilt */
+            box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7);
         }
-        .signature {
-            text-align: right;
-            font-style: italic;
-            color: #777;
-            margin-top: 50px;
-        }
+        /* Plan Grid */
         .plan-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px; /* More space between plans */
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Wider plan cards */
+            gap: 40px;
+            margin-top: 50px;
             text-align: center;
         }
         .plan-card {
-            border: 1px solid #e0e0e0;
-            padding: 30px; /* More padding inside cards */
-            border-radius: 10px;
-            background-color: #fff; /* Solid white for plan cards */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            border: 2px solid #666;
+            padding: 40px;
+            border-radius: 12px;
+            background-color: rgba(40, 40, 40, 0.8);
+            box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
         .plan-card:hover {
-            transform: translateY(-5px); /* Slight lift on hover */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+            transform: translateY(-8px);
+            box-shadow: 8px 8px 22px rgba(0, 0, 0, 0.8);
         }
         .plan-card h3 {
-            color: #2e8b57;
-            margin-bottom: 20px;
-            font-size: 1.6em;
+            color: #ffa000;
+            margin-bottom: 30px;
+            font-size: 2em;
         }
         .plan-card p {
-            margin-bottom: 12px;
-            color: #777;
-            font-size: 1em;
+            margin-bottom: 15px;
+            color: #ccc;
+            font-size: 1.1em;
         }
         .plan-card .price {
-            font-size: 2em;
+            font-size: 2.8em;
             font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
+            color: #00cc66;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
         .button.small {
-            padding: 12px 24px;
-            font-size: 1em;
-            margin-top: 20px;
-            background-color: #3cb371;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            margin-top: 30px;
+            background-color: #555;
+            color: #eee;
             border-radius: 8px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out;
         }
         .button.small:hover {
-            background-color: #2e8b57;
+            background-color: #777;
+            transform: translateY(-3px);
         }
+        /* Footer */
         .footer {
             text-align: center;
-            margin-top: 60px;
+            margin-top: 80px;
             color: #777;
-            font-size: 0.9em;
+            font-size: 1em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="main-title">Unleash Your Minecraft Universe with Yair0211 Hosting!</h1>
+        <h1 class="main-title">Minecrafted Hosting by Yair0211</h1>
         <div class="intro-section">
-            <p>Hey there, fellow block enthusiasts! 👋 Get ready to embark on incredible Minecraft journeys with hosting crafted just for you by <span class="highlight">Yair0211</span>.</p>
-            <p>Forget the frustrations of lag and complicated setups. We deliver <span class="highlight">smooth</span>, <span class="highlight">reliable</span>, and seriously <span class="highlight">fun</span> Minecraft server hosting, letting you focus on what truly matters: building, exploring, and creating unforgettable moments with your friends.</p>
+            <p>Greetings, fellow adventurers! Prepare to delve into the blocky realms with premium Minecraft hosting, meticulously crafted for you by <span class="highlight">Yair0211</span>.</p>
+            <p>Bid farewell to lag and convoluted setups! We deliver a <span class="highlight">seamless</span>, <span class="highlight">reliable</span>, and utterly <span class="highlight">immersive</span> Minecraft experience, empowering you to focus on building, exploring, and forging legendary tales with your comrades.</p>
         </div>
 
         <div class="features-section">
-            <h2>Why Choose Yair0211 Hosting?</h2>
+            <h2>Our Block-Solid Features</h2>
             <ul class="features-list">
-                <li><span class="highlight">Blazing-fast Performance:</span> Experience lag-free gameplay with our high-performance servers.</li>
-                <li><span class="highlight">Easy Server Setup:</span> Get your world running in minutes with our simple control panel.</li>
-                <li><span class="highlight">Unwavering Reliability:</span> Count on us for consistent uptime, keeping your adventures alive.</li>
-                <li><span class="highlight">Expert Support Team:</span> Friendly and knowledgeable support is always ready to assist you.</li>
-                <li><span class="highlight">Automatic World Backups:</span> Your creations are safe with our automated backup system.</li>
-                <li><span class="highlight">Always Up-to-Date:</span> Enjoy the latest Minecraft versions and features.</li>
+                <li><span class="highlight">Lightning-Fast Performance</span>: Experience the Overworld and beyond with unparalleled speed.</li>
+                <li><span class="highlight">Effortless World Deployment</span>: Launch your server in mere moments with our intuitive interface.</li>
+                <li><span class="highlight">Unbreakable Stability</span>: Rely on our fortress of servers for 24/7 uptime.</li>
+                <li><span class="highlight">Dedicated Support Crew</span>: Our expert team is your steadfast ally, ready to assist.</li>
+                <li><span class="highlight">Automated World Preservation</span>: Your masterpieces are safeguarded with automatic backups.</li>
+                <li><span class="highlight">Always Cutting-Edge</span>: Enjoy the latest Minecraft updates and features from the forge.</li>
             </ul>
         </div>
 
         <div class="get-started-area">
-            <h2>Ready to Forge Your Adventure?</h2>
-            <p style="color: #555; font-size: 1.1em;">Launch your ultimate Minecraft experience today!</p>
-            <a href="#pricing" class="get-started-button">Get Started Now!</a>
+            <h2>Embark on Your Epic Saga!</h2>
+            <p style="color: #ddd; font-size: 1.2em;">The adventure awaits! Claim your block of the digital world today.</p>
+            <a href="#pricing" class="get-started-button">Forge Your Server Now!</a>
         </div>
 
-        <h2 id="pricing">Explore Our Powerful Hosting Plans</h2>
-        <p style="text-align: center; color: #777; font-size: 1.1em;">Find the perfect plan to power your unique Minecraft world.</p>
+        <h2 id="pricing">Unearth Our Powerful Hosting Plans</h2>
+        <p style="text-align: center; color: #ccc; font-size: 1.1em;">Discover the perfect power source for your Minecraft universe.</p>
         <div class="plan-grid">
             <div class="plan-card">
-                <h3>Starter Realm</h3>
-                <p>Ideal for small groups and casual play.</p>
-                <p class="price">$9.99/month</p>
-                <p>Up to 10 Players</p>
-                <p>2 GB RAM</p>
-                <p>Standard Support</p>
-                <a href="#" class="button small">Select Realm</a>
+                <h3>The Novice Node</h3>
+                <p>For fledgling builders and intimate gatherings.</p>
+                <p class="price">$14.99/month</p>
+                <p>Up to 15 Adventurers</p>
+                <p>3 GB RAM</p>
+                <p>Apprentice Support</p>
+                <a href="#" class="button small">Select Node</a>
             </div>
             <div class="plan-card">
-                <h3>Builder's Haven</h3>
-                <p>Great for growing communities and creative projects.</p>
-                <p class="price">$19.99/month</p>
-                <p>Up to 25 Players</p>
-                <p>4 GB RAM</p>
-                <p>Priority Support</p>
-                <a href="#" class="button small">Select Haven</a>
+                <h3>The Artisan Engine</h3>
+                <p>For growing communities and ambitious creations.</p>
+                <p class="price">$29.99/month</p>
+                <p>Up to 30 Crafters</p>
+                <p>6 GB RAM</p>
+                <p>Master Support</p>
+                <a href="#" class="button small">Harness Engine</a>
             </div>
             <div class="plan-card">
-                <h3>Epic Universe</h3>
-                <p>Perfect for large servers, modpacks, and ultimate performance.</p>
-                <p class="price">$34.99/month</p>
-                <p>50+ Players</p>
-                <p>8 GB+ RAM</p>
-                <p>VIP Support</p>
-                <a href="#" class="button small">Select Universe</a>
+                <h3>The Legend Core</h3>
+                <p>For sprawling realms, modded sagas, and ultimate performance.</p>
+                <p class="price">$49.99/month</p>
+                <p>50+ Legends</p>
+                <p>10 GB+ RAM</p>
+                <p>Legendary Support</p>
+                <a href="#" class="button small">Ignite Core</a>
             </div>
         </div>
         <p class="signature">- Yair0211</p>
-        <p class="footer">© 2025 Minecraft Hosting by Yair0211</p>
+        <p class="footer">© 2025 Crafted with Blocks and Code by Yair0211</p>
     </div>
 </body>
 </html>
